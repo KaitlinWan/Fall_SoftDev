@@ -45,6 +45,7 @@ def weightedRandom():
     choice = random.choice(myList)
     print("Probablity: ")
     print(str( myList.count(choice)) + "/" + str(len(myList)))
+    #Verifies the probablity of getting this occupation
     return choice
 
 
