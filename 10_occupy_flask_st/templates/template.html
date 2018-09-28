@@ -1,19 +1,28 @@
-
 <!DOCTYPE html>
 <html>
 <head> <title>Occupation Table</title> </head>
 <body>
+<<<<<<< HEAD
   <!--  randomJob returned from ranomJob() from app.py -->
+=======
+  <!-- randomJob returned from randomJob() from app.py -->
+>>>>>>> 4b21ceced6d73372e108e01edec38c31dde65c00
     <h1>Random Job: {{ randomJob }} </h1>
   <h2><center>Occupation Table</center></h2>
   <!-- Creation of Table Styles -->
   <table align = "center", border="1", style="width:100%">
     <!-- Loop through whole dictionary -->
-    {% for key in jobs %}
+  
     <tr>
+      <th> Occupations </th>
+      <th> Percentage </th>
+    </tr>
+    <tr>
+			     
       <!-- Creates | Job Title | percentage | in the table -->
-      <th> {{key}} </th>
-      <th> {{jobs[key]}} </th>
+        {% for key in jobs %}
+      <td> {{key}} </td>
+      <td> {{jobs[key]}} </td>
     </tr>
     {% endfor %}
 </table>
