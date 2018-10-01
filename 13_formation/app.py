@@ -8,15 +8,13 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return render_template('template.html')
+    return render_template('template.html',fmeth=request.method)
     #Simple HomePage!
 
-@app.route('/auth')
+@app.route('/auth',methods = ["POST"])
 def authenticate():
-    print(app)
-    print(request)
-    dict = request.args
-    return render_template('template0.html',name=dict['user'])
+    dict = request.form
+    return render_template('template0.html',name=dict["user"])
 
 if __name__ == '__main__':
     app.debug = True
