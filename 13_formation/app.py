@@ -14,7 +14,7 @@ def hello():
 @app.route('/auth',methods = ["POST"])
 def authenticate():
     dict = request.form
-    return render_template('template0.html',name=dict["user"])
+    return render_template('template0.html',name=dict["user"],fmethod=request.method)
 
 if __name__ == '__main__':
     app.debug = True
