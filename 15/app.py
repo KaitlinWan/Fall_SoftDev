@@ -4,13 +4,13 @@
 #K 14: Do I Know You?
 #2018-10-01
 
-from flask import Flask,request,render_template,session,url_for,redirect
+from flask import Flask,request,render_template,session,url_for,redirect,flash
 from util import auth
 import os
 
 app = Flask(__name__)
 # Set the secret key to some random bytes. Keep this really secret!
-app.secret_key = open("secret.txt","r").read()
+app.secret_key = "123123123abcabc"
 
 
 @app.route('/')
@@ -21,14 +21,16 @@ def hello(badWaters = "False"):
 
     if "badWaters" in request.args: #Displayed when trying to go to /loggedin without being logged in
         login = "You are treading in BAD waters!!"
-        return render_template("template.html", loginStatus = login)
+        flash(login)
+        return render_template("template.html")
 
     if not("user" in request.args): #Default page
         return render_template("template.html")
 
     login = auth.checkInfo(request.args["user"],request.args["pass"])
     if login != "Login Successful": #Page with error msg
-        return render_template("template.html", loginStatus = login)
+        flash(login)
+        return render_template("template.html")
 
     else:
         session['user'] = request.args["user"]
