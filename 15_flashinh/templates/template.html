@@ -2,13 +2,13 @@
 Team KateLin
 Kaitlin Wan + Kevin Lin
 SoftDev1 pd6
-K 14: Do I Know You?
-2018-10-01
+K 15: Oh yes, perhaps I do…
+2018-10-03
 -->
 <!DOCTYPE html>
 <html>
 <head>
-  <title>{% block title %}{% endblock %} KateLin's Site</title>
+  <title>{% block title %}{% endblock %}KateLin's Site</title>
 <link rel="stylesheet" type="text/css" href="static/mystyle.css">
 </head>
 
@@ -33,4 +33,9 @@ K 14: Do I Know You?
 {% endfor %}
 {% endblock %}
 </body>
+<footer>
+  {% block footer %}
+    <center> &copy; KateLin </center>
+  {% endblock %}
+</footer>
 </html>

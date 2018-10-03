@@ -1,8 +1,8 @@
 #Team KateLin
 #Kaitlin Wan + Kevin Lin
 #SoftDev1 pd6
-#K 14: Do I Know You?
-#2018-10-01
+#K 14: Oh yes, perhaps I do…
+#2018-10-03
 
 from flask import Flask,request,render_template,session,url_for,redirect,flash
 from util import auth
@@ -10,7 +10,7 @@ import os
 
 app = Flask(__name__)
 # Set the secret key to some random bytes. Keep this really secret!
-app.secret_key = "123123123abcabc"
+app.secret_key = open("secret.txt","r").read()
 
 
 @app.route('/')
