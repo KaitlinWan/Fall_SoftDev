@@ -1,5 +1,5 @@
-#Kaitlin Wan
-#SoftDev1 pd6
+#Pineapple Pizza - Ricky Lin, Kevin Lin
+#SoftDev1 pd0
 #SQLITE3 BASICS
 #2018-10-04
 
@@ -12,21 +12,26 @@ DB_FILE="discobandit.db"
 db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 c = db.cursor()               #facilitate db ops
 
+open(DB_FILE,'w').close() #Reset DB file
+
 #==========================================================
 #INSERT YOUR POPULATE CODE IN THIS ZONE
 
-command = "CREATE TABLE peeps(name TEXT, age INTEGER, id INTEGER PRIMARY KEY);"        #build SQL stmt, save as string
-c.execute(command)
+command = "CREATE TABLE peeps(name TEXT, age INTEGER, id INTEGER)"          #build SQL stmt, save as string
+c.execute(command)    #run SQL statement
 
-with open('peeps.csv') as csvfile:
-    reader = csv.DictReader(csvfile)
+with open('peeps.csv','r') as csvfile:
+    reader = csv.DictReader(csvfile) #Create csv dictionary
     for row in reader:
-        #insert into tbl values(name,age,id);
-        pop = ("insert into peeps values(" + "'" + row['name'] + "'" + ',' + row['age'] + ',' + row['id'] + ');')
-        c.execute(pop)
+        #Add values into peeps table
+        c.execute("INSERT INTO peeps VALUES(" + "'" + row['name'] + "'," + row['age'] + "," + row['id'] + ")")
 
-command = ('select * from peeps;')
-c.execute(command) #run SQL statement
+c.execute("CREATE TABLE courses(code TEXT, mark INTEGER, id INTEGER)") #Make new table
+with open('courses.csv','r') as csvfile:
+    reader = csv.DictReader(csvfile) #Create csv dictionary
+    for row in reader:
+        #Add values into courses table
+        c.execute("INSERT INTO peeps VALUES(" + "'" + row['code'] + "'," + row['mark'] + "," + row['id'] + ")")
 
 #==========================================================
 
