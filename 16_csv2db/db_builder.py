@@ -12,7 +12,7 @@ DB_FILE="discobandit.db"
 db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 c = db.cursor()               #facilitate db ops
 
-open(discobandit.db,'w').close() #Reset DB file
+open(DB_FILE,'w').close() #Reset DB file
 
 #==========================================================
 #INSERT YOUR POPULATE CODE IN THIS ZONE
