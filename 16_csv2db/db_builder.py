@@ -1,5 +1,5 @@
-#Pineapple Pizza - Ricky Lin, Kevin Lin
-#SoftDev1 pd0
+#Kaitlin Wan
+#SoftDev1 pd6
 #SQLITE3 BASICS
 #2018-10-04
 
