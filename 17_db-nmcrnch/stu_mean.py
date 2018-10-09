@@ -1,4 +1,4 @@
-#Kaitlin Wan
+#TEAM GARY RISES AGAIN - Kaitlin Wan & Joshua Weiner
 #SoftDev1 pd6
 #K #17: Average
 #2018-10-08
@@ -13,52 +13,54 @@ DB_FILE="discobandit.db"
 
 db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 c = db.cursor()
-ids = []
 
-def id():
+def make_dict():
     students = c.execute("SELECT * FROM peeps")
     #Returns Tuples
     peeps = []
-    mainDic = {}
     #Makes a LIST of TUPLES
     for row in students:
-        peeps.append(row) #Puts Tuple inside a List
-    for x in peeps:
-        ids.append(x[1]) #Makes a LIST of ids
-    #MAKES IDs INTO DICTIONARY
-    mainDic = { i : None for i in ids}
-    #print(peeps)
-    #print(ids)
-    #print(mainDic)
-    return mainDic
+        peeps.append({'id' : row[2] , 'marks' : [], 'name' : row[0]}) #Puts Tuple id/grade pair inside a List
 
-students = id()
+    for student in peeps:
+        id_num = student['id'] #get student id
+        command = "SELECT mark FROM courses WHERE courses.id={}".format(id_num) #gets the grades from each course that shares the student id
+        grades = c.execute(command) #command to retrieve the grades
+        for mark in grades:
+            mark = list(mark)
+            student['marks'].append(mark[0]) #Adds grades to matching student id.
+    return peeps #return dict
 
-#Add a List of Grades as part of def of classes:
-def addGrade():
-    allGrades = []
-    grades = []
-
-    for x in ids:
-        command = "SELECT mark FROM courses WHERE id = " + str(x) + ";"
-        print(command)
-        marks = c.execute(command) #holds only marks of x student in a tuple
-        for row in marks: #Grade
-            if(marks == None):
-                pass
-            print(row)
-            grades.append(row)
-        for x in grades:
-            print(x)
-        students[x] = grades
-    print(students)
+#Calculate Average:
+def findAvg(grades):
+    avgs = []
+    for row in grades:
+        allG = row['marks']
+        avg = 0
+        for grade in allG:
+            avg = sum(allG)/len(allG)
+            #print(avg)
+        avgs.append({'id' : row['id'] , 'average' : avg, 'name': row['name']})
+    print(avgs) #FOR DISPLAY AS OUTLINED IN HW
+    return avgs
 
 
-def table():
-    c.execute("CREATE TABLE peeps_avg (id INTEGER, average FLOAT)")
-    c.execute("SELECT id, average FROM peeps")
-    for data in c.fetchall():
-        c.execute("INSERT INTO peeps_avg VALUES ( \"{}\" , \"{}\" )".format(data[0] , data[1]) ) #run SQL statement
+def table(stu_avgs):
+    c.execute("CREATE TABLE peeps_avg (id INTEGER, average FLOAT)") #Create new table in DB
+    id_avg = stu_avgs
+    for x in id_avg:
+        #print(x)
+        c.execute("INSERT INTO peeps_avg VALUES({0}, {1})".format(x['id'] , x['average']) ) #run SQL statement
 
+#============ RUN ===============
+student_grades = make_dict()
+#print(students) # Test statement for debugging
+student_averages = findAvg(student_grades)
+#print(student_averages) #Test statement for debugging
+table(student_averages)
+#========== END RUN==============
 
-table()
+db.commit() #save changes
+db.close()  #close database
+
+#P.S. Teletype is an amazing tool for collaboration!!
