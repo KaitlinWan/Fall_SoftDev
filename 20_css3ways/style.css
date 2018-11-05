@@ -1,0 +1,59 @@
+/* Team Cascades: Xiaojie(Aaron) Li, Kaitlin Wan
+SoftDev1 pd6
+K20 -- Comics Sans Syndrome
+2018-11-02  */
+
+body {
+    background-color: #666666;
+    font-family: arial;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    'head head head head'
+    'menu title title title'
+    'words main main main'
+    'foot foot foot foot';
+    grid-column-gap: 8%;
+    background-color: #757575;
+}
+
+.head {
+    grid-area: head;
+    text-align: center;
+    color: white;
+    background-color: #BDBDBD;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.main {
+    grid-area: main;
+}
+
+.menu {
+    grid-area: menu;
+}
+
+.foot {
+    grid-area: foot;
+    text-align: right;
+    background-color: #575757;
+    color: #70726D;
+}
+
+.words {
+    grid-area: words;
+    color: #D1D5D8;
+    font-weight: bold;
+}
+
+.title {
+    grid-area: title;
+}
+
+.no-margin {
+    margin-top: 0px;
+}
