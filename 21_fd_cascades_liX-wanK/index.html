@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zurb Foundations</title>
+    <link rel="stylesheet" href="css/foundation.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0/dist/css/foundation.css" type="text/css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <div id="wrapper">
+
+        <!-- nav bar -->
+        <div class="top-bar is-anchored is-at-top">
+            <div class="top-bar-left">
+                <ul class="menu">
+                    <li><a href="#intro">Home</a></li>
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <ul class="menu">
+                    <li><a href="#grid">Grid</a></li>
+                    <li><a href="#callout">Callout</a></li>
+                    <li><a href="#cards">Style</a></li>
+                    <li><a href="#forms">Forms</a></li>
+                    <li><a href="#typo">Typography</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- intro -->
+        <div class="callout large" id="intro">
+            <div class="text-center">
+                <h1>Welcome to the Zurb Foundations Web-Framework Introduction</h1>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <br><br>
+            <!-- GRID DEMO -->
+            <div class="grid-x grid-padding-x">
+                <div class="large-12 cell">
+                    <br>
+                    <h3 class="heavy">Foundation's Grid Cells are Responsive: Changing By Window Size</h3>
+                </div>
+            </div>
+            <!-- GRID -->
+            <div class="grid-x grid-margin-x">
+
+                <!-- LEFT SIDE -->
+                <div class="large-8 medium-8 cell">
+                    <h4>Try resizing the window and look at these:</h4>
+
+                    <div class="grid-x grid-padding-x">
+                        <div class="large-12 medium-12 cell">
+                            <div class="primary callout">
+                                <p><strong>This is a 12 cell "subsection" in a 8 cell parent.</strong> Each of following cells includes a callout element for visuals, but it's not required.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-x grid-padding-x">
+                        <div class="large-6 medium-6 cell">
+                            <div class="warning callout">
+                                <p>This is a 6 cell within the 8 cell parent</p>
+                            </div>
+                        </div>
+                        <div class="large-6 medium-6 cell">
+                            <div class="warning callout">
+                                <p>Twin 6 cell, on the same grid-x</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-x grid-padding-x">
+                        <div class="large-4 medium-4 small-4 cell">
+                            <div class="primary callout">
+                                <p>These are size 4 cells</p>
+                            </div>
+                        </div>
+                        <div class="large-4 medium-4 small-4 cell">
+                            <div class="primary callout">
+                                <p>all lined up on the same</p>
+                            </div>
+                        </div>
+                        <div class="large-4 medium-4 small-4 cell">
+                            <div class="primary callout">
+                                <p>grid-x (think of it like a row)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT SIDE -->
+                <div class="text-center large-4 medium-4 small-12 cell">
+                    <h4>Here Be Some Buttons:</h4>
+                    <div class="grid-x grid-padding-x">
+
+                        <!-- left buttons -->
+                        <div class="large-6 medium-6 small-12 text-left cell">
+
+                            <div class="grid-x grid-padding-x">
+                                <div class="large-12 medium-12">
+                                    <a href="#home" class="alert button">Alert button</a>
+                                </div>
+                            </div>
+                            <div class="grid-x grid-padding-x">
+                                <div class="large-12 medium-12">
+                                    <a href="#home" class="button">Simple button</a>
+                                </div>
+                            </div>
+                            <div class="grid-x grid-padding-x">
+                                <div class="large-12 medium-12">
+                                    <a href="#home" class="success button">Success button</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- right buttons -->
+                        <div class="large-6 medium-6 text-right cell">
+
+                            <div class="grid-x grid-padding-x">
+                                <div class="large-12 medium-12">
+                                    <a href="#home" class="clear button">Clear button</a>
+                                </div>
+                            </div>
+                            <div class="grid-x grid-padding-x">
+                                <div class="large-12 medium-12">
+                                    <a href="#home" class="hollow button">H0LL0W button</a>
+                                </div>
+                            </div>
+                            <div class="grid-x grid-padding-x">
+                                <div class="large-12 medium-12">
+                                    <a href="#home" class="disabled button">Disabled button :(</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large-12 medium-12">
+                        <div class="grid-x grid-padding-x cell">
+                            <a href="#home" class="expanded button">Big 0ne: See the Variety?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <br><br><br>
+            <!-- callout demo -->
+            <div class="grid-x grid-padding-x">
+                <div class="large-12 cell" id="callout">
+                    <br>
+                    <div class="large-12 medium-12 small-12 text-center">
+                        <div class="callout primary">
+                            <h2>This is a primary callout</h2>
+                        </div>
+                    </div>
+                    <div class="large-12 medium-12 small-12 cell text-center">
+                        <div class="callout success">
+                            <h2>Here's a success callout</h2>
+                        </div>
+                    </div>
+                    <div class="large-12 medium-12 small-12 cell text-center">
+                        <div class="callout warning">
+                            <h2>Warning callout</h2>
+                        </div>
+                    </div>
+                    <div class="large-12 medium-12 small-12 cell text-center">
+                        <div class="callout alert">
+                            <h2>An alert callout!</h2>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+
+            <!-- STYLED CARDS -->
+            <div class="grid-x grid-padding-x">
+                <div class="large-4 medium-4 small-12 cell" id="cards">
+                    <br>
+                    <div class="radius bordered shadow card">
+                        <img src="http://pumpkinnook.com/artwork/pumpkin-2016-09-02.jpg" >
+                        <div class="card-divider">
+                            Some
+                        </div>
+                        <div class="card-section">
+                            <h4>Pumpkin Family One.</h4>
+                            <p class="limited">Crescendo corpora bene candy corn chipmunk jacket rustling moonlight shearling. Breezy vivid pendebat? Uggs fireplace cornstalks. Flannel eodem cooling booties tumescere. Frosty campfire diverso imagine hygge earthy. Marshmallows gold? Apple cider hay Halloween quoque first frost bare branches principio. Jack-o-lantern Uggs hibernating vivid corn maze imagine. Hygge hay austro cocoa breezy caelum. Colder fleece sunset fleece snuggling colorful fall snuggling. Comfortable candy corn harvest moon. Caelum colored blustery gray. Gray back-to-school overgrown sibi. Otia discordia earthy quoque sanctius colorful possedit feras igni.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="large-4 medium-4 small-12 cell">
+                    <br>
+                    <div class="radius bordered shadow card">
+                        <img src="http://pumpkinnook.com/artwork/pumpkin-2016-09-02.jpg">
+                        <div class="card-divider">
+                            Styled
+                        </div>
+                        <div class="card-section">
+                            <h4>Pumpkin Family Two.</h4>
+                            <p class="limited">Porrexerat moderantum quilt leaves hot chocolate mulled cider amber beanie. Uggs cord of wood pontus jack-o-lantern wind leggings eodem igni hot chocolate. Tractu corpora caeli hoodie. Amber eodem gourds pluvialibus. Animal hoodie harvest knitted scarecrow autumn wool leaf pile. Flannel permisit coeptis chestnuts change of season otia bountiful. Maple syrup fireplace terra foliage caeleste leaf-strewn. Duae brisk bountiful back-to-school cocoa mulled cider illas flannel. Moderantum colorful cold snap pumpkin pie. Bonfire golden rust-colored shearling. Cold snap migrating geese rustling origo Lululemon Uggs. Terra Lululemon, crunchy peregrinum pumpkin pie tumescere glogg hygge.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="large-4 medium-4 small-12 cell">
+                    <br>
+                    <div class="radius bordered shadow card">
+                        <img src="http://pumpkinnook.com/artwork/pumpkin-2016-09-02.jpg">
+                        <div class="card-divider">
+                            Cards
+                        </div>
+                        <div class="card-section">
+                            <h4>Pumpkin Family Three.</h4>
+                            <p class="limited">Hiking wind cornucopia squash feras gusty. Moonlight hayride hibernating gusty habentia acorn habentia allspice. Igni burning leaves maple syrup perveniunt Uggs foliage melioris. Bale of hay frosty cocoa origo caelum. Fireplace cabin. Chilly morning fireplace sanctius porrexerat coeperunt aberant obliquis duae knitted. Apple pie blankets bene. Retinebat ignotas cognati. Festival festival frosty obliquis allspice aer. Circumfuso rustling marshmallows diverso liberioris. Animal iudicis quae foliage cornstalks fireplace amber cider donut scarecrow. Nutmeg porrexerat obstabatque grain colors orba. Feras jack-o-lantern timebat breezy evolvit quem. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+
+            <!-- FORMS -->
+            <div class="grid-x grid-padding-x">
+                <div class="large-12 columns cell" id="forms">
+                    <br>
+                    <h3>We Know You Love Forms!</h3>
+                    <form>
+                        <div class="large-12 columns cell">
+                            <label>Input Label
+                                <input type="text" placeholder="large-12.columns" />
+                            </label>
+                        </div>
+
+                        <div class="grid-x grid-padding-x">
+                            <div class="large-4 columns cell">
+                                <label>Input Label
+                                    <input type="text" placeholder="large-4.columns" />
+                                </label>
+                            </div>
+                            <div class="large-4 columns cell">
+                                <label>Input Label
+                                    <input type="text" placeholder="large-4.columns" />
+                                </label>
+                            </div>
+                            <div class="large-4 columns cell">
+                                <label>Input Label</label>
+                                <div class="small-9 columns">
+                                    <input type="text" placeholder="large-4.columns" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-x grid-padding-x">
+                            <div class="large-12 columns cell">
+                                <label>Select Box
+                                    <select>
+                                        <option value="pumpkin">pumpkin</option>
+                                        <option value="squash">squash</option>
+                                        <option value="orangeleaves">orange leaves</option>
+                                        <option value="Thanksgiving">Thanksgiving</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="grid-x grid-padding-x">
+                            <div class="large-6 medium-6 cell">
+                                <label>Choose Your Favorite</label>
+                                <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
+                                <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
+                            </div>
+                            <div class="large-6 medium cell">
+                                <label>Check these out</label>
+                                <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+                                <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+                            </div>
+                        </div>
+                        <div class="grid-x grid-padding-x">
+                            <div class="large-12 columns cell">
+                                <label>Textarea Label
+                                    <textarea placeholder="small-12.columns"></textarea>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <br><br><br>
+
+            <!-- BLOCKQUOTES -->
+            <div class="grid-x grid-padding-x">
+                <div class="large-12 cell" id="typo">
+                    <br>
+                    <h3>Have something deep to say? There's blockquotes!</h3>
+                    <blockquote>
+                        Insert DEEP QUOTE here! Such deep, much very wow! Are you inspired now?
+                        <cite>Don't forget to cite your author here!</cite>
+                    </blockquote>
+                    <br>
+                </div>
+
+                <div class="large-12 cell">
+                    <h3>Hover over the abbreviations to see pop-up text!</h3>
+                    <p>In my dream last night, I saw <abbr title="John Ronald Reuel">J. R. R.</abbr>
+                        Tolkien and George <abbr title="Raymond Richard">R. R.</abbr>
+                        Martin hanging out on Sunset <abbr title="Boulevard">Blvd</abbr>.
+                    </p>
+                    <br>
+                </div>
+
+                <div class="large-12 cell">
+                    <h3>You probably won't need keystrokes often, but Foundation has it!</h3>
+                    <p>Press <kbd>Ctrl+Alt+L</kbd> to start local host. Press <kbd>Ctrl+Alt+Q</kbd> to end it.</p>
+                    <br>
+                </div>
+                <div class="large-12 cell">
+                    <h3>Looking for pagination? Foundation's got you.</h3>
+                    <nav aria-label="Pagination">
+                        <ul class="pagination">
+                            <li class="pagination-previous"><a href="#" aria-label="Prev page">Previous <span class="show-for-sr">page</span></a></li>
+                            <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+                            <li><a href="#" aria-label="Page 2">2</a></li>
+                            <li><a href="#" aria-label="Page 3">3</a></li>
+                            <li><a href="#" aria-label="Page 4">4</a></li>
+                            <li class="ellipsis" aria-hidden="true"></li>
+                            <li><a href="#" aria-label="Page 12">12</a></li>
+                            <li><a href="#" aria-label="Page 13">13</a></li>
+                            <li class="pagination-next"><a href="#" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
+                        </ul>
+                    </nav>
+                    <br>
+                </div>
+                <div class="large-12 cell">
+                    <h3>I bet you didn't expect badges...</h3>
+                    <span class="badge primary">A</span>
+                    <span class="badge secondary">L</span>
+                    <span class="badge success">5</span>
+                    <span class="badge alert">B</span>
+                    <span class="badge warning">Q</span>
+                    <br><br>
+                </div>
+            </div>
+            <br><br><br>
+
+        </div>
+    </div>
+</body>
+</html>
