@@ -6,14 +6,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zurb Foundations</title>
     <link rel="stylesheet" href="css/foundation.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0/dist/css/foundation.css" type="text/css">
-    <link rel="stylesheet" href="css/app.css">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/app.css"> -->
+
+    <!-- CUSTOM STYLES -->
+    <style>
+    #wrapper {
+        width:100%;
+        height:100%;
+        min-height:100%;
+        z-index:-999;
+        background: url("https://previews.123rf.com/images/yuzach/yuzach1308/yuzach130800019/21743475-autumn-leaves-motif-color%C3%A9-sur-fond-pluies.jpg");
+        opacity: 0.82;
+        margin:0;
+        padding:0;
+    }
+
+    .fi-heart {
+        font-size: 18rem;
+        color: #ec341b;
+    }
+
+    .fi-social-facebook {
+        color: #284a85;
+    }
+
+    .fi-map {
+        color: #b3a078;
+    }
+
+    .fi-trees {
+        color: green;
+    }
+
+    .fi-lock {
+        color: #613e14;
+    }
+
+    .top-bar {
+        width: 100%;
+        padding: 0px 0px;
+        position: fixed;
+        z-index: 1;
+    }
+
+    .top-bar ul {
+        background-color: #bd6c02;
+    }
+
+    .menu a {
+        color: white;
+        padding: 1rem 1.5rem;
+        /* border-bottom: 2px solid white; */
+    }
+
+    .top-bar .menu a:hover {
+        /* border-bottom: 2px solid blue; */
+        background-color: #cd8f3d;
+    }
+
+    #intro {
+        border-bottom: 0px;
+    }
+
+    .grid-x, .grid-padding-x {
+        background-color: #e9e9e9;
+    }
+
+    .heavy {
+        font-weight: 600;
+    }
+
+    .limited {
+        height: 25rem;
+        overflow: auto;
+    }
+
+    kbd {
+        background-color: #9d9d9d;
+    }
+
+    </style>
+
 </head>
 <body>
     <div id="wrapper">
 
         <!-- nav bar -->
-        <div class="top-bar is-anchored is-at-top">
+        <div class="top-bar is-at-top">
             <div class="top-bar-left">
                 <ul class="menu">
                     <li><a href="#intro">Home</a></li>
@@ -26,17 +108,20 @@
                     <li><a href="#cards">Style</a></li>
                     <li><a href="#forms">Forms</a></li>
                     <li><a href="#typo">Typography</a></li>
+                    <li><a href="#surprise">Surprise</a></li>
                 </ul>
             </div>
         </div>
         <!-- intro -->
         <div class="callout large" id="intro">
             <div class="text-center">
-                <h1>Welcome to the Zurb Foundations Web-Framework Introduction</h1>
+                <br>
+                <h1>Zurb Foundations Foundation by Team Cascades</h1>
+                <h2><small>Use the Fixed NavBar to Navigate the Page!</small></h2>
             </div>
         </div>
 
-        <div class="grid-container">
+        <div class="grid-container" id="grid">
             <br><br>
             <!-- GRID DEMO -->
             <div class="grid-x grid-padding-x">
@@ -45,6 +130,7 @@
                     <h3 class="heavy">Foundation's Grid Cells are Responsive: Changing By Window Size</h3>
                 </div>
             </div>
+
             <!-- GRID -->
             <div class="grid-x grid-margin-x">
 
@@ -86,14 +172,14 @@
                         </div>
                         <div class="large-4 medium-4 small-4 cell">
                             <div class="primary callout">
-                                <p>grid-x (think of it like a row)</p>
+                                <p>grid-x (think rows)</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- RIGHT SIDE -->
-                <div class="text-center large-4 medium-4 small-12 cell">
+                <div class="text-center large-4 medium-4 cell">
                     <h4>Here Be Some Buttons:</h4>
                     <div class="grid-x grid-padding-x">
 
@@ -141,15 +227,19 @@
                         <div class="grid-x grid-padding-x cell">
                             <a href="#home" class="expanded button">Big 0ne: See the Variety?</a>
                         </div>
+                        <br>
                     </div>
                 </div>
             </div>
+            <!-- here -->
+        </div>
+        <br><br><br>
 
-
-            <br><br><br>
+        <div class="grid-container" id="callout">
+            <br><br>
             <!-- callout demo -->
             <div class="grid-x grid-padding-x">
-                <div class="large-12 cell" id="callout">
+                <div class="large-12 cell">
                     <br>
                     <div class="large-12 medium-12 small-12 text-center">
                         <div class="callout primary">
@@ -170,15 +260,18 @@
                         <div class="callout alert">
                             <h2>An alert callout!</h2>
                         </div>
-
+                        <br>
                     </div>
                 </div>
             </div>
             <br><br><br>
+        </div>
 
+        <div class="grid-container" id="cards">
+            <br><br>
             <!-- STYLED CARDS -->
             <div class="grid-x grid-padding-x">
-                <div class="large-4 medium-4 small-12 cell" id="cards">
+                <div class="large-4 medium-4 small-12 cell">
                     <br>
                     <div class="radius bordered shadow card">
                         <img src="http://pumpkinnook.com/artwork/pumpkin-2016-09-02.jpg" >
@@ -218,13 +311,16 @@
                             <p class="limited">Hiking wind cornucopia squash feras gusty. Moonlight hayride hibernating gusty habentia acorn habentia allspice. Igni burning leaves maple syrup perveniunt Uggs foliage melioris. Bale of hay frosty cocoa origo caelum. Fireplace cabin. Chilly morning fireplace sanctius porrexerat coeperunt aberant obliquis duae knitted. Apple pie blankets bene. Retinebat ignotas cognati. Festival festival frosty obliquis allspice aer. Circumfuso rustling marshmallows diverso liberioris. Animal iudicis quae foliage cornstalks fireplace amber cider donut scarecrow. Nutmeg porrexerat obstabatque grain colors orba. Feras jack-o-lantern timebat breezy evolvit quem. </p>
                         </div>
                     </div>
+                    <br>
                 </div>
             </div>
             <br><br><br>
-
+        </div>
+        <div class="grid-container" id="forms">
+            <br><br>
             <!-- FORMS -->
             <div class="grid-x grid-padding-x">
-                <div class="large-12 columns cell" id="forms">
+                <div class="large-12 columns cell">
                     <br>
                     <h3>We Know You Love Forms!</h3>
                     <form>
@@ -277,6 +373,31 @@
                             </div>
                         </div>
                         <div class="grid-x grid-padding-x">
+                            <br>
+                            <div class="large-6 medium-6 cell">
+                                <label>Ooooh medium animated checkbox!</label>
+                                <div class="switch medium">
+                                    <input class="switch-input" id="yes-no" type="checkbox" name="check-switch">
+                                    <label class="switch-paddle" for="yes-no">
+                                        <span class="switch-active" aria-hidden="true">Yes</span>
+                                        <span class="switch-inactive" aria-hidden="true">No</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="large-6 medium-6 cell">
+                                <label>Vote for our page?</label>
+                                <div class="switch large">
+                                    <input class="switch-input" id="mhm-nah" type="checkbox" name="vote-switch">
+                                    <label class="switch-paddle" for="mhm-nah">
+                                        <span class="switch-active" aria-hidden="true">Mhm</span>
+                                        <span class="switch-inactive" aria-hidden="true">Nah</span>
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="grid-x grid-padding-x">
                             <div class="large-12 columns cell">
                                 <label>Textarea Label
                                     <textarea placeholder="small-12.columns"></textarea>
@@ -287,12 +408,15 @@
                 </div>
             </div>
             <br><br><br>
+        </div>
 
+        <div class="grid-container" id="typo">
+            <br><br>
             <!-- BLOCKQUOTES -->
             <div class="grid-x grid-padding-x">
                 <div class="large-12 cell" id="typo">
                     <br>
-                    <h3>Have something deep to say? There's blockquotes!</h3>
+                    <h3>Have something deep to say? There are blockquotes!</h3>
                     <blockquote>
                         Insert DEEP QUOTE here! Such deep, much very wow! Are you inspired now?
                         <cite>Don't forget to cite your author here!</cite>
@@ -340,10 +464,47 @@
                     <span class="badge warning">Q</span>
                     <br><br>
                 </div>
+                <div class="large-12 cell">
+                    <h3>Hehe there some cool icons too:</h3>
+                    <div class="grid-x grid-padding-x">
+
+                        <div class="large-2 medium-2 small -4 text-center cell">
+                            <i class="fi-cloud"></i>
+                        </div>
+                        <div class="large-2 medium-2 small -4 text-center cell">
+                            <i class="fi-social-facebook"></i>
+                        </div>
+                        <div class="large-2 medium-2 small -4 text-center cell">
+                            <i class="fi-map"></i>
+                        </div>
+                        <div class="large-2 medium-2 small -4 text-center cell">
+                            <i class="fi-clock"></i>
+                        </div>
+                        <div class="large-2 medium-2 small -4 text-center cell">
+                            <i class="fi-trees"></i>
+                        </div>
+                        <div class="large-2 medium-2 small -4 text-center cell">
+                            <i class="fi-lock"></i>
+                        </div>
+                    </div>
+                    <br>
+                </div>
             </div>
             <br><br><br>
-
         </div>
+
+        <div class="grid-container" id="surprise">
+            <br><br>
+            <div class="grid-x grid-padding-x">
+                <div class="large-12 text-center cell">
+                    <br>
+                    <h3><strong>Thank you for visting! This site was created through lots of</strong></h3>
+                    <i class="fi-heart"></i>
+                </div>
+            </div>
+            <br><br><br>
+        </div>
+        <br><br>
     </div>
 </body>
 </html>
