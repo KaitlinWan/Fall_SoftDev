@@ -36,11 +36,10 @@ def hello():
     date = finalpic['earth_date']
     str = str + " on " + date
     imgad = finalpic['img_src']
-
+    words = ""
     try:
         artist = request.args["name"]
         song = request.args["song"]
-
         words = song + musixmatch.song_lyric(song,artist)
 
     except:
