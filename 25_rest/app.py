@@ -1,8 +1,7 @@
-#Team KateLin
-#Kaitlin Wan + Kevin Lin
+#Kaitlin Wan
 #SoftDev1 pd6
-#K 14: Do I Know You?
-#2018-10-01
+#K #25: REST STUFF
+#W 2018-11-15
 
 from flask import Flask,request,render_template,session,url_for,redirect
 import json,urllib.request
