@@ -1,0 +1,7 @@
+#CHECK INTO DATABASE TABLE
+    #1. Look into Database + get all user names
+    #2. Check if the user name is already valid?
+    #2.5 IF NOT VALID, FLASH INVALID USER
+    #3. If user is in database, get the users passwordself.
+    #4. If user and pass match, go to new screen of loggged
+    #5. if NOT match, FLASH INVALID PASS
