@@ -44,7 +44,9 @@ gcdo.addEventListener('click', function() {
 });
 
 var rando = document.getElementById("rand");
-rando.addEventListener('click', function() {
+/*rando.addEventListener('click', function() {
     console.log("randStudent(): " + randStudent());
     document.getElementById("randr").innerHTML = "randStudent(): " + randStudent();
-});
+});*/
+
+rando.addEventListener('click', function(e){console.log(e);});
